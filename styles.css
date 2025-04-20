@@ -1,0 +1,134 @@
+</style>
+</head>
+<body class="tema-oscuro">
+
+<audio id="musicaFondo" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio. 
+</audio>
+
+<button id="muteBtn">🎵</button>
+
+    <h1>Aurora Boreal</h1>
+    <p>Dos mundos, un mismo cielo.</p>
+
+    <video controls width="460">
+    <source src="Aurora Boreal.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+
+</video>
+<div class:"boton-tema">
+    <button onclick="cambiarTema()">Cambiar colores</button>
+</div>
+
+<div class="carousel">
+    <img src="Chico.png" alt="Imagen 1">
+    <img src="Ventana.png" alt="Imagen 2">
+    <img src="Mañana.png" alt="Imagen 3">
+    <img src="Maquillaje.png" alt="Imagen 4">
+</div>
+<div class="video-container">
+    <video controls>
+        <source src="Naturaleza.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+    <video controls>
+        <source src="Fiesta.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+</div>
+
+<div class="carousel"> 
+    <img src="Linterna.png" alt=Imagen 5">
+    <img src="Solitaria.png" alt=Imagen 6">
+    <img src="Nieve1.png" alt=Imagen 7">
+    <img src="Nieve2.png" alt=Imagen 8">
+</div>
+
+ <div class="video-container">
+<video controls>
+        <source src="Nevando.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+</div>
+
+<div class="carousel"> 
+    <img src="Aurora1.png" alt=Imagen 9">
+    <img src="Aurora2.png" alt=Imagen 10">
+</div>
+
+<div class="video-container">
+    <video controls>
+        <source src="Busqueda.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+    <video controls>
+        <source src="Noche.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+</div>
+
+<div class="carousel"> 
+    <img src="Ojo.png" alt=Imagen 11">
+    <img src="Mujer.png" alt=Imagen 12">
+</div>
+
+<div class="video-container">
+<video controls>
+        <source src="Bar1.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+<video controls>
+        <source src="Bar2.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+</div>
+
+<div class="carousel"> 
+    <img src="Phone.png" alt=Imagen 13">
+</div>
+
+<div class="video-container">
+<video controls>
+        <source src="Final.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. 
+    </video>
+<div/>
+
+<div class="fin">
+    <p>FIN</p>
+</div>
+
+    <script>
+        function cambiarTema() {
+            document.body.classList.toggle("tema-claro");
+            document.body.classList.toggle("tema-oscuro");
+        }
+
+  document.addEventListener("DOMContentLoaded" , function () {
+       const musica = document.getElementById("musicaFondo");
+       const boton = document.getElementById("muteBtn");
+
+      function iniciarAudio() {
+      musica.play().catch(() => {}); 
+      document.removeEventListener("mousemove", iniciarAudio);
+        }
+
+      document.addEventListener("mousemove", iniciarAudio);
+
+      boton.addEventListener("click", funcion () {
+          if (musica.paused) {
+              musica.play(); 
+              boton.classList.remove("muted"); 
+          } else {
+
+              musica.pause(); 
+              boton.classList.add("muted");
+          }
+        });
+      });
+    </script>
+
+
+</body>
+</html>
