@@ -13,7 +13,7 @@
                 document.removeEventListener("mousemove", iniciarAudio);
             }
 
-            document.addEventListener("click", iniciarAudio);
+            document.addEventListener("mousemove", iniciarAudio);
 
             boton.addEventListener("click", function () {
                 if (musica.paused) {
